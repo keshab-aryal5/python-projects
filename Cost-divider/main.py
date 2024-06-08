@@ -11,6 +11,9 @@ paying_details = {}
 total_member = int(input("Enter the total number of people: "))
 print("\n")
 
+if total_member < 0:
+    raise Exception("Number of people cann't be negative.")
+
 # collecting details of each members
 for x in range(1,total_member+1):
     name = input(f"Enter the name of the member {x}: ")
