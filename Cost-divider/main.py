@@ -35,6 +35,11 @@ for x in members:
 more_payers.sort(key=lambda x: x.payment,reverse=True)
 less_payers.sort(key=lambda x: x.payment,reverse=True)
 
+for x in more_payers:
+    print(x.name)
+
+for x in less_payers:
+    print(x.name)
 
 # final logic for calculation of payment details from less payers to more payers
 for less in less_payers:
