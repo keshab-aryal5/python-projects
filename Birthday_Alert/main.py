@@ -20,6 +20,8 @@ birthday_dict = file.to_dict(orient="records")
 
 for x in birthday_dict:
     if x['month'] == current_month and x['day'] == current_day:
+        if pd.isna(x['mname']):
+            x['mname']=""
         sms = f'''Radhea Radhea 🙏🙏
         Today is {x['name']} {x['mname']} {x['lname']}'s birthday.
         {x['nickname']} is keeping a new step to {current_year-int(x['year'])+1} year.
